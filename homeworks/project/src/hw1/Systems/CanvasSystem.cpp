@@ -193,7 +193,7 @@ void CanvasSystem::OnUpdate(Ubpa::UECS::Schedule& schedule) {
 			if (data->opt_enable_context_menu && ImGui::IsMouseReleased(ImGuiMouseButton_Right) && drag_delta.x == 0.0f && drag_delta.y == 0.0f)
 				ImGui::OpenPopupContextItem("context");
 			if (ImGui::BeginPopup("context")) {
-				if (ImGui::MenuItem("Remove one", NULL, false, data->input_points.size() > 0)) { data->input_points.resize(data->input_points.size() - 2); }
+				if (ImGui::MenuItem("Remove one", NULL, false, data->input_points.size() > 0)) { data->input_points.resize(data->input_points.size() - 1); }
 				if (ImGui::MenuItem("Remove all", NULL, false, data->input_points.size() > 0)) { data->input_points.clear(); }
 				ImGui::EndPopup();
 			}
